@@ -431,14 +431,14 @@ figcaption{
 .split-gallery{
   padding:8px;
   background:#fff;
-  margin-top:-1%;
+  margin-top:0;
 }
 .split-gallery-grid{
   display:grid;
   grid-template-columns:repeat(2, minmax(0, 1fr));
   gap:8px;
   background:transparent;
-  margin-top: -4.2%;
+  margin-top:0;
 }
 .split-gallery-card{
   display:block;
@@ -491,7 +491,7 @@ figcaption{
 }
 
 .pieces{
-  padding:64px 0 72px;
+  padding:64px 0 12px;
   background:#fff;
 }
 .pieces-shell{
