@@ -1797,30 +1797,20 @@ figcaption{
     grid-template-columns:repeat(2, minmax(0, 1fr));
     gap:14px;
   }
-  .designer{
-    margin-bottom:0;
-  }
   .designer-shell{
     min-height:0;
     height:auto;
     grid-template-columns:1fr;
-    overflow:hidden;
   }
   .designer-content{
     padding:58px 40px 52px;
-    margin:0;
-    width:100%;
   }
   .designer-title{
     max-width:620px;
     font-size:clamp(48px, 13vw, 84px);
   }
   .designer-media{
-    width:100%;
-    height:auto;
-    min-height:0;
-    margin-left:0;
-    aspect-ratio:4 / 5;
+    min-height:clamp(420px, 78svh, 680px);
   }
   .designer-copy{
     font-size:16px;
@@ -2161,8 +2151,13 @@ figcaption{
     padding:0;
     margin-bottom:0;
   }
+  .designer-shell{
+    overflow:hidden;
+  }
   .designer-content{
     padding:44px 22px 36px;
+    margin:0;
+    width:100%;
   }
   .designer-kicker{
     margin-bottom:30px;
@@ -2180,9 +2175,16 @@ figcaption{
     margin:18px 0 24px;
   }
   .designer-media{
+    width:100%;
+    height:auto;
+    min-height:0;
+    margin-left:0;
     aspect-ratio:4 / 5;
   }
+  .designer-content > p,
   .designer-copy{
+    margin:0;
+    width:100%;
     font-size:15px;
     line-height:1.5;
   }
