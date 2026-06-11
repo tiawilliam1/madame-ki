@@ -1,0 +1,8 @@
+# Netlify redirects: map root to English and /gr to Greek index
+/	/index.html	200
+/gr	/gr/index.html	200
+
+# If you deploy to Netlify and want clean URLs for languages
+# Redirect /en to / and /gr to /gr/
+/en	/index.html	200
+/gr/	/gr/index.html	200

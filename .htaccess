@@ -1,0 +1,11 @@
+# Apache rewrite rules for language root mapping
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # serve Greek site at /gr
+  RewriteRule ^gr/?$ /gr/index.html [L]
+  RewriteRule ^gr/(.*)$ /gr/$1 [L]
+
+  # default root to index.html
+  RewriteRule ^$ /index.html [L]
+</IfModule>
