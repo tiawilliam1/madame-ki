@@ -20,8 +20,16 @@
 }
 
 *{box-sizing:border-box}
-html{height:100%}
-body{min-height:100%}
+html{
+  height:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+body{
+  min-height:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
 body{
   margin:0;
   font-family:var(--font-body);
@@ -1980,9 +1988,11 @@ figcaption{
       "right";
     justify-items:center;
     row-gap:10px;
+    max-width:100%;
+    overflow-x:hidden;
   }
   body.mobile-nav-ready .site-header{
-    grid-template-columns:42px 1fr 42px;
+    grid-template-columns:42px minmax(0, 1fr) 42px;
     grid-template-areas:
       "burger logo ."
       "left left left";
@@ -2000,6 +2010,14 @@ figcaption{
   body.mobile-nav-ready .logo-link{
     grid-area:logo;
     justify-self:center;
+    min-width:0;
+    max-width:100%;
+  }
+  body.mobile-nav-ready .logo{
+    width:min(257px, 100%);
+    height:auto;
+    max-height:91px;
+    object-fit:contain;
   }
   body.mobile-nav-ready .header-right{
     display:none;
