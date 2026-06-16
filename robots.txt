@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tiawilliam1.github.io/madame-ki/sitemap.xml
