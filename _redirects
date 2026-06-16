@@ -13,14 +13,8 @@ https://www.madameki.eu/*  https://madameki.eu/:splat  301!
 /accessories.html  /vintage-accessories.html  301
 /press.html  /madame-ki-press.html  301
 /contact.html  /contact-madame-ki-athens.html  301
-/gr/contact.html  /gr/epikoinonia-madame-ki.html  301
-/gr/press.html  /gr/typos-madame-ki.html  301
 
-# Map root to English and /gr to Greek index
 /	/index.html	200
-/gr	/gr/index.html	200
 
 # If you deploy to Netlify and want clean URLs for languages
-# Redirect /en to / and /gr to /gr/
 /en	/index.html	200
-/gr/	/gr/index.html	200

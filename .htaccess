@@ -19,12 +19,6 @@
   RewriteRule ^accessories\.html$ /vintage-accessories.html [R=301,L]
   RewriteRule ^press\.html$ /madame-ki-press.html [R=301,L]
   RewriteRule ^contact\.html$ /contact-madame-ki-athens.html [R=301,L]
-  RewriteRule ^gr/contact\.html$ /gr/epikoinonia-madame-ki.html [R=301,L]
-  RewriteRule ^gr/press\.html$ /gr/typos-madame-ki.html [R=301,L]
-
-  # serve Greek site at /gr
-  RewriteRule ^gr/?$ /gr/index.html [L]
-  RewriteRule ^gr/(.*)$ /gr/$1 [L]
 
   # default root to index.html
   RewriteRule ^$ /index.html [L]

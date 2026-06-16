@@ -6,10 +6,10 @@ Canonical domain:
 - Keep the old `.html` filenames as redirects only; the indexable pages use SEO-friendly names like `vintage-tops.html`.
 
 Netlify:
-- Place the `_redirects` file at the project root. Netlify will honor the canonical-domain and old-page redirects, then serve `/` as `index.html` and `/gr` as `/gr/index.html`.
+- Place the `_redirects` file at the project root. Netlify will honor the canonical domain and old-page redirects, then serve `/` as `index.html`.
 
 Apache:
-- Upload the `.htaccess` file; ensure `mod_rewrite` is enabled. Rules redirect `www` to the canonical domain, redirect old page names, map `/gr` to `/gr/index.html`, and map the root to `/index.html`.
+- Upload the `.htaccess` file; ensure `mod_rewrite` is enabled. Rules redirect `www` to the canonical domain, redirect old page names, and map the root to `/index.html`.
 
 Nginx:
 - Use `nginx.conf.sample` as a starting point; set `root` to your site's directory and enable the server blocks.
