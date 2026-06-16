@@ -1,6 +1,26 @@
-# Apache rewrite rules for language root mapping
+# Apache rewrite rules for canonical domain, SEO-friendly URLs, and language root mapping
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # canonical domain: use madameki.eu, not www.madameki.eu
+  RewriteCond %{HTTP_HOST} ^www\.madameki\.eu$ [NC]
+  RewriteRule ^(.*)$ https://madameki.eu/$1 [R=301,L]
+
+  # old URLs redirect to SEO-friendly URLs
+  RewriteRule ^about-me\.html$ /about-elena-ketselidou.html [R=301,L]
+  RewriteRule ^categories\.html$ /vintage-clothing-gallery.html [R=301,L]
+  RewriteRule ^tops\.html$ /vintage-tops.html [R=301,L]
+  RewriteRule ^corsets\.html$ /vintage-corsets.html [R=301,L]
+  RewriteRule ^blazers\.html$ /vintage-blazers.html [R=301,L]
+  RewriteRule ^shirts\.html$ /vintage-shirts.html [R=301,L]
+  RewriteRule ^skirts\.html$ /vintage-skirts.html [R=301,L]
+  RewriteRule ^kimonos\.html$ /vintage-kimonos.html [R=301,L]
+  RewriteRule ^sets\.html$ /vintage-sets.html [R=301,L]
+  RewriteRule ^accessories\.html$ /vintage-accessories.html [R=301,L]
+  RewriteRule ^press\.html$ /madame-ki-press.html [R=301,L]
+  RewriteRule ^contact\.html$ /contact-madame-ki-athens.html [R=301,L]
+  RewriteRule ^gr/contact\.html$ /gr/epikoinonia-madame-ki.html [R=301,L]
+  RewriteRule ^gr/press\.html$ /gr/typos-madame-ki.html [R=301,L]
 
   # serve Greek site at /gr
   RewriteRule ^gr/?$ /gr/index.html [L]

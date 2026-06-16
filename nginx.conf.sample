@@ -1,10 +1,32 @@
 # Nginx sample server configuration for language routing
 server {
   listen 80;
-  server_name example.com;
+  server_name www.madameki.eu;
+
+  return 301 https://madameki.eu$request_uri;
+}
+
+server {
+  listen 80;
+  server_name madameki.eu;
 
   root /var/www/site;
   index index.html;
+
+  location = /about-me.html { return 301 /about-elena-ketselidou.html; }
+  location = /categories.html { return 301 /vintage-clothing-gallery.html; }
+  location = /tops.html { return 301 /vintage-tops.html; }
+  location = /corsets.html { return 301 /vintage-corsets.html; }
+  location = /blazers.html { return 301 /vintage-blazers.html; }
+  location = /shirts.html { return 301 /vintage-shirts.html; }
+  location = /skirts.html { return 301 /vintage-skirts.html; }
+  location = /kimonos.html { return 301 /vintage-kimonos.html; }
+  location = /sets.html { return 301 /vintage-sets.html; }
+  location = /accessories.html { return 301 /vintage-accessories.html; }
+  location = /press.html { return 301 /madame-ki-press.html; }
+  location = /contact.html { return 301 /contact-madame-ki-athens.html; }
+  location = /gr/contact.html { return 301 /gr/epikoinonia-madame-ki.html; }
+  location = /gr/press.html { return 301 /gr/typos-madame-ki.html; }
 
   location = / {
     try_files /index.html =404;
